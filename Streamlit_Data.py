@@ -7,7 +7,6 @@ westbengal_data = pd.read_csv("WestBengal_Data.csv")
 goa_data = pd.read_csv("Goa_Data.csv")
 punjab_data = pd.read_csv("Punjab_Data.csv")
 kaac_data = pd.read_csv("KAAC_Data.csv")
-northbengal_data = pd.read_csv("Northbengal_Data.csv")
 telangana_data = pd.read_csv("Telangana_Data.csv")  # Load Telangana data
 bihar_data = pd.read_csv("Bihar_Data.csv")          # Load Bihar data
 jammu_data = pd.read_csv("Jammu_Data.csv")          # Load Jammu data
@@ -20,7 +19,6 @@ westbengal_data['state'] = 'West Bengal'
 goa_data['state'] = 'Goa'
 punjab_data['state'] = 'Punjab'
 kaac_data['state'] = 'KAAC'
-northbengal_data['state'] = 'North Bengal'
 telangana_data['state'] = 'Telangana'
 bihar_data['state'] = 'Bihar'
 jammu_data['state'] = 'Jammu'
@@ -28,7 +26,7 @@ kerala_data['state'] = 'Kerala'
 jodhpur_data['state'] = 'Jodhpur'
 
 # Combine the data into a single DataFrame and remove unnamed columns
-all_data = pd.concat([chandigarh_data, westbengal_data, goa_data, punjab_data, kaac_data, northbengal_data,telangana_data, bihar_data, jammu_data, kerala_data,jodhpur_data], ignore_index=True)
+all_data = pd.concat([chandigarh_data, westbengal_data, goa_data, punjab_data, kaac_data,telangana_data, bihar_data, jammu_data, kerala_data,jodhpur_data], ignore_index=True)
 all_data = all_data.loc[:, ~all_data.columns.str.contains('^Unnamed')]
 
 # Sidebar filters
